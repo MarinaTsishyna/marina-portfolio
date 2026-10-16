@@ -550,8 +550,9 @@ body {
 /* 3D MODELING — PROJECT DESCRIPTION */
 
 .modeling-description {
+    display: block;
     max-width: 760px;
-    margin: 0 0 40px;
+    margin: 0 0 55px;
     font-size: 18px;
     line-height: 1.7;
     color: #777;
@@ -560,7 +561,12 @@ body {
 /* 3D MODELING — IMAGE GALLERY */
 
 .modeling-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    width: 100%;
     max-width: 1150px;
+    min-width: 0;
     margin-left: auto;
     margin-right: auto;
 }
@@ -568,7 +574,9 @@ body {
 .modeling-showcase img {
     display: block;
     width: 100%;
+    max-width: 100%;
     height: auto;
+    object-fit: contain;
 }
 
 @media (max-width: 800px) {
@@ -681,22 +689,28 @@ body {
     /* 3D MODELING */
 
     .modeling-category {
-        margin-top: 80px;
-    }
-
-    .modeling-showcase {
-        gap: 16px;
+       margin-top: 80px;
     }
 
     .modeling-description {
+       width: 100%;
        max-width: 100%;
        font-size: 15px;
        line-height: 1.6;
-       margin-bottom: 28px;
+       margin-bottom: 36px;
     }
 
     .modeling-showcase {
+       width: 100%;
        max-width: 100%;
+       min-width: 0;
+       gap: 16px;
+    }
+
+    .modeling-showcase img {
+       width: 100%;
+       max-width: 100%;
+       height: auto;
     }
 
     /* ABOUT */
