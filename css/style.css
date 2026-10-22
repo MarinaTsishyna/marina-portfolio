@@ -365,6 +365,32 @@ body {
     height: auto;
 }
 
+/* SOFT MODERNISM */
+
+.soft-modernism-description {
+    max-width: 760px;
+    margin: 28px 0 48px;
+    line-height: 1.8;
+}
+
+.soft-modernism-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.soft-modernism-showcase img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.soft-modernism-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    align-items: start;
+}
 /* ABOUT */
 
 .about {
@@ -712,6 +738,22 @@ body {
        max-width: 100%;
        height: auto;
     }
+    
+    /* SOFT MODERNISM MOBILE */
+
+    .soft-modernism-description {
+        max-width: 100%;
+        margin: 24px 0 36px;
+    }
+
+    .soft-modernism-showcase {
+        gap: 16px;
+    }
+
+    .soft-modernism-row {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
 
     /* ABOUT */
 
@@ -811,5 +853,71 @@ body {
 
     .footer {
         flex-direction: column;
+    }
+}
+
+
+/* PORTFOLIO CATEGORY NAVIGATION */
+
+.portfolio-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px 32px;
+    margin-top: 32px;
+}
+
+.portfolio-nav a {
+    display: inline-block;
+    padding: 8px 0;
+    border-bottom: 1px solid transparent;
+
+    color: #77716b;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-decoration: none;
+
+    transition: color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.portfolio-nav a:hover,
+.portfolio-nav a:focus-visible {
+    color: #292724;
+    border-bottom-color: #292724;
+}
+
+/* Keep category headings visible after anchor navigation */
+
+#interior-design,
+#visualization,
+#modeling {
+    scroll-margin-top: 100px;
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+    .portfolio-nav {
+        gap: 8px 20px;
+        margin-top: 24px;
+    }
+
+    .portfolio-nav a {
+        font-size: 12px;
+        padding: 6px 0;
+    }
+
+    #interior-design,
+    #visualization,
+    #modeling {
+        scroll-margin-top: 75px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
     }
 }
