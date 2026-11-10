@@ -946,3 +946,29 @@ body {
     .smeg-showcase, .smeg-row { gap: 16px; }
     .smeg-row { grid-template-columns: 1fr; }
 }
+/* UPHOLSTERED ARMCHAIR */
+.armchair-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    width: 100%;
+    max-width: 1150px;
+    min-width: 0;
+    margin: 0 auto;
+}
+.armchair-showcase img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+.armchair-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    align-items: start;
+}
+@media (max-width: 800px) {
+    .armchair-showcase, .armchair-row { gap: 16px; }
+    .armchair-row { grid-template-columns: 1fr; }
+}
